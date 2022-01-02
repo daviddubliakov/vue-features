@@ -1,6 +1,7 @@
 <template>
   <div class="container pt-5">
     <div class="card center">
+      <div v-html="myHtml"></div>
       <h2 v-text="title"></h2>
       <h2 v-once>{{ title }}</h2>
       <h2 v-pre>{{ title }}</h2>
@@ -13,6 +14,7 @@
 export default {
   name: "App",
   data: () => ({
+    myHtml: "<h1>Vue 3 App</h1>",
     title: "I'm Grut",
   }),
 };
