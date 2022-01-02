@@ -1,7 +1,9 @@
 <template>
   <div class="container pt-5">
     <div class="card center">
-      <h1 v-text="title"></h1>
+      <h2 v-text="title"></h2>
+      <h2 v-once>{{ title }}</h2>
+      <button class="btn" @click="title = 'I was changed'">Chage title</button>
     </div>
   </div>
 </template>
