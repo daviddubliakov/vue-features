@@ -19,7 +19,9 @@
           :key="index"
           @click="items.splice(index, 1)"
         >
-          <strong>{{ value }}</strong>
+          <strong>{{ value }}</strong
+          >&nbsp;
+          <input type="text" @click.stop />
         </li>
       </ul>
       <h3 v-show="items.length === 0">No elements</h3>
