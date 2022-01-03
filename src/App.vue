@@ -6,7 +6,7 @@
       <h2 v-once>{{ title }}</h2>
       <h2 v-pre>{{ title }}</h2>
       <button class="btn" @click="title = 'I was changed'">Chage title</button> -->
-      <ul class="list">
+      <ul class="list" v-if="items.length">
         <!-- <li class="list-item" v-for="(item, index) in 7" :key="index">
           {{ item }}
         </li> -->
@@ -22,6 +22,7 @@
           <strong>{{ value }}</strong>
         </li>
       </ul>
+      <h3 v-show="items.length === 0">No elements</h3>
     </div>
   </div>
 </template>
