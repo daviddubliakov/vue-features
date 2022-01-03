@@ -15,7 +15,7 @@
         </li> -->
         <li
           class="list-item"
-          v-for="(value, index) in items"
+          v-for="(value, index) in evenItems"
           :key="value"
           @click="items.splice(index, 1)"
         >
@@ -42,5 +42,10 @@ export default {
     },
     items: [1, 2, 3, 4, 5, 6],
   }),
+  computed: {
+    evenItems() {
+      return this.items.filter((item) => item % 2 === 0);
+    },
+  },
 };
 </script>
