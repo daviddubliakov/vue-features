@@ -16,7 +16,7 @@
         <li
           class="list-item"
           v-for="(value, index) in items"
-          :key="index"
+          :key="value"
           @click="items.splice(index, 1)"
         >
           <strong>{{ value }}</strong
