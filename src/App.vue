@@ -20,7 +20,7 @@
           class="list-item"
           v-for="(value, index) in items"
           :key="value"
-          @click="items.splice(index, 1)"
+          @click.right.prevent="remove(index), log(value)"
         >
           <strong>{{ value }}</strong
           >&nbsp;
@@ -50,6 +50,12 @@ export default {
       this.items.unshift(this.$refs.myInput.value);
       this.$refs.myInput.value = "";
     },
+    remove(index) {
+      this.items.splice(index, 1);
+    },
+    log(item) {
+      console.log('Log item:', item);
+    }
   },
   computed: {
     evenItems() {
